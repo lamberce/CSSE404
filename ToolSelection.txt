@@ -1,0 +1,4 @@
+We have decide to use java to implement our compiler because it has useful tools and libraries that will allow us to focus on the more important aspects of constructing a compiler. (It was also decided the entire class would use java)
+
+Our lexer code can be found in the file simpleLexer.java
+
