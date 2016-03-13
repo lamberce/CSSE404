@@ -1,5 +1,0 @@
-Delimeter, ;
-ID, a7
-ID, publict
-Operator, +
-ID, abc
