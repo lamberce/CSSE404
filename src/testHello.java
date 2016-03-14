@@ -22,6 +22,10 @@ public class testHello {
 		List<? extends Token> tokens = tester.getAllTokens();
 		for (Token token : tokens) {
 			System.out.println(token);
+			System.out.println(token.getText());
+			System.out.println(token.getType());
+			String[] tokes = tester.getRuleNames();
+			System.out.println(tokes[token.getType()]);
 		}
 	}
 }
