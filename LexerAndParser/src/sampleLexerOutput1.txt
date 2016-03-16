@@ -1,0 +1,4 @@
+ReservedWord, class
+ID, Test
+Delimiter, {
+Delimiter, }

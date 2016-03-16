@@ -1,0 +1,3 @@
+Grammer code is in LexerAndParser/src/MiniJava.g4
+Our lexer is in LexerAndParser/target/generated-sources/antlr4/MiniJava.java
+Output is in LexerAndParter/src/<output filename>
