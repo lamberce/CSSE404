@@ -1,4 +1,4 @@
-// Generated from Hello.g4 by ANTLR 4.4
+// Generated from hello.g4 by ANTLR 4.4
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -9,7 +9,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class HelloLexer extends Lexer {
+public class helloLexer extends Lexer {
 	static { RuntimeMetaData.checkVersion("4.4", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -29,13 +29,13 @@ public class HelloLexer extends Lexer {
 	};
 
 
-	public HelloLexer(CharStream input) {
+	public helloLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "Hello.g4"; }
+	public String getGrammarFileName() { return "hello.g4"; }
 
 	@Override
 	public String[] getTokenNames() { return tokenNames; }

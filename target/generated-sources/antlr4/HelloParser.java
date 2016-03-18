@@ -1,4 +1,4 @@
-// Generated from Hello.g4 by ANTLR 4.4
+// Generated from hello.g4 by ANTLR 4.4
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class HelloParser extends Parser {
+public class helloParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.4", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -27,7 +27,7 @@ public class HelloParser extends Parser {
 	};
 
 	@Override
-	public String getGrammarFileName() { return "Hello.g4"; }
+	public String getGrammarFileName() { return "hello.g4"; }
 
 	@Override
 	public String[] getTokenNames() { return tokenNames; }
@@ -41,23 +41,23 @@ public class HelloParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public HelloParser(TokenStream input) {
+	public helloParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class RContext extends ParserRuleContext {
-		public TerminalNode ID() { return getToken(HelloParser.ID, 0); }
+		public TerminalNode ID() { return getToken(helloParser.ID, 0); }
 		public RContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_r; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof HelloListener ) ((HelloListener)listener).enterR(this);
+			if ( listener instanceof helloListener ) ((helloListener)listener).enterR(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof HelloListener ) ((HelloListener)listener).exitR(this);
+			if ( listener instanceof helloListener ) ((helloListener)listener).exitR(this);
 		}
 	}
 
