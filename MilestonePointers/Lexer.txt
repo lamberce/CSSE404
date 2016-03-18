@@ -1,3 +1,8 @@
 Grammer code is in LexerAndParser/src/MiniJava.g4
 Our lexer is in LexerAndParser/target/generated-sources/antlr4/MiniJava.java
 Output is in LexerAndParter/src/<output filename>
+Also, in /src folder is lexerAndParerInput.java which contains the 
+	main method where we actually print out the tokens.  Also, 
+	testCase.txt (also in /src) is where we copy and paste whichever
+	test we are using (it is the file that is read in by the InputStream
+	in lexerAndParerInput.java).
