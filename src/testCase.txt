@@ -1,18 +1,7 @@
-m99999999//999df
-//m995984
-diggydog958
-dogdigsfor/**/dirti89nthenullyard/**/forbones/**/underneathclass/*the*/doghouse
-System.out.println.HAHAHA
-==0=/**/=
-/*
+/* This is a minimal test case, i.e. the smallest MiniJava program possible. */
 
-// */
-
-THIS IS NOT STILL COMMENTAGE
-
-*/ //these are operators
-
-
-// /*
-you thought I was a comment!
-*/
+class Min {
+    public static void main (String[] args) {
+        
+    }
+}

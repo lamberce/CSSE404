@@ -1,0 +1,12 @@
+Integer=3
+Letter=4
+Operator=7
+Comment=10
+Digit=5
+Delimiter=8
+NonZeroDigit=6
+MultiLineComment=12
+ReservedWord=1
+SingleLineComment=11
+ID=2
+Whitespace=9

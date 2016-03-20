@@ -1,10 +1,9 @@
 // Define a grammar called Hello
-grammar MiniJava;
-
+lexer grammar MiniJavaL;
+/*
 // Parser Stuff
-r : program;
 program : mainClassDecl '{'classDecl'}';
-mainClassDecl : 'class' ID '{' 'public' 'static' 'void' 'main' '(' 'String' '[' ']' ID ')' '{'(stmt)*'}' '}';
+mainClassDecl : 'class' ID '{' 'public' 'static' 'void' 'main' '(' 'String' '[' ']' ID ')' '{'(stmt)*'}';
 classDecl : 'class' ID {'[' 'extends' ID ']'} '{'(classVarDecl)* (methodDecl)*'}';
 classVarDecl : type ID;
 formal : type ID;
@@ -27,7 +26,7 @@ expr : expr('+'|'-'|'*'|'/'|'<'|'<='|'>='|'>'|'=='|'!='|'&&'|'||')expr ';'
 		| 'true'
 		| 'false'
 		| '(' expr ')';
-
+*/
 // Lexer Stuff
 //Program : (Token|Whitespace)*;
 //Token : (ID|ReservedWord|Operator|Delimiter|Whitespace);
