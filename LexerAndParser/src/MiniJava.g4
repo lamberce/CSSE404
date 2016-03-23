@@ -2,31 +2,44 @@
 grammar MiniJava;
 
 // Parser Stuff
-r : program;
-program : mainClassDecl '{'classDecl'}';
-mainClassDecl : 'class' ID '{' 'public' 'static' 'void' 'main' '(' 'String' '[' ']' ID ')' '{'(stmt)*'}' '}';
-classDecl : 'class' ID {'[' 'extends' ID ']'} '{'(classVarDecl)* (methodDecl)*'}';
-classVarDecl : type ID;
-formal : type ID;
+r : program EOF;
+program : mainClassDecl (classDecl)*;
+mainClassDecl : 'class' ID '{' 'public' 'static' 'void' 'main' '(' 'String' '[' ']' ID ')' '{' (stmt)* '}' '}';
+classDecl : 'class' ID '{' (classVarDecl)* (methodDecl)* '}'
+		| 'class' ID 'extends' ID '{' (classVarDecl)* (methodDecl)* '}';
+classVarDecl : type ID ';';
+formal : type ID | ;
 methodDecl : 'public' type ID '(' formal (',' formal)*')''{'(stmt)* 'return' expr';''}';
-type : 'int'|'boolean'|ID;
+type : 'int' | 'boolean' | ID;
 stmt : type ID '=' expr ';'
 		| '{'stmt*'}'
 		| 'if' '(' expr ')' stmt 'else' stmt
 		| 'while' '(' expr ')' stmt
 		| 'System.out.println' '(' expr ')' ';'
-		| ID '=' expr;
-expr : expr('+'|'-'|'*'|'/'|'<'|'<='|'>='|'>'|'=='|'!='|'&&'|'||')expr ';'
-		| ('-'|'!')expr ';'
-		| expr '.' ID '(' (expr {,expr})* ')'
-		| 'new' ID '(' ')'
-		| ID ''
-		| 'this'
-		| Integer ';'
-		| 'null'
-		| 'true'
-		| 'false'
-		| '(' expr ')';
+		| ID '=' expr ';';
+
+exprTerminals: 'new' ID '(' ')' | ID | 'this' | Integer | 'null' | 'true' | 'false';
+expr : minusNot exprTerminals exprPrime (('||') expr)*
+		| expr2
+		| ('-'|'!')expr
+		| exprTerminals exprPrime '.' ID '(' expr (',' expr)* ')'
+		| exprTerminals exprPrime '.' ID '(' ')';
+
+expr2 : expr3 (('&&') expr)*
+		| expr3;
+expr3 : expr4 (('!=' | '==') expr)*
+		| expr4;
+expr4 : expr5 (('<'|'<='|'>='|'>') expr)*
+		| expr5;
+expr5 : expr6 (('+'|'-') expr)*
+		| expr6;
+expr6 : expr7 (('*'|'/') expr)*
+		| expr7;
+expr7 : '(' expr ')'
+		| exprTerminals ;
+
+exprPrime : exprTerminals exprPrime | ('-' | '!') exprPrime | ;
+minusNot : '-' | '!' | ;
 
 // Lexer Stuff
 //Program : (Token|Whitespace)*;
